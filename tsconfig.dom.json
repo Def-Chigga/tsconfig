@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    /* 语言和环境 */
+    "target": "ESNext",
+    "moduleDetection": "force", // 强制模块检测
+    "libReplacement": false, // 库替换
+    "jsx": "preserve", // 触发 .jsx 文件，其中 JSX 保持不变
+    "jsxImportSource": "vue", // jsx 导入源
+    "useDefineForClassFields": true, // 使用 Define 作为类字段
+
+    "lib": ["ES2020", "DOM", "DOM.Iterable"]
+  }
+}

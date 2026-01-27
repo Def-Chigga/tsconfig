@@ -1,0 +1,65 @@
+{
+  "compilerOptions": {
+    /* 类型检查 */
+    "allowUnreachableCode": false, // 允许无法访问的代码
+    "allowUnusedLabels": false, // 允许未使用的标签
+    "alwaysStrict": true, // 始终严格模式
+    "exactOptionalPropertyTypes": false, // 精确可选属性类型
+    "noFallthroughCasesInSwitch": true, // Switch 中无 Fallthrough 情况
+    "noImplicitAny": true, // 无隐式 Any
+    "noImplicitOverride": true, // 无隐式覆盖
+    "noImplicitReturns": true, // 无隐式返回
+    "noImplicitThis": true, // 无隐式 this
+    "noPropertyAccessFromIndexSignature": true, // 无索引签名的属性访问
+    "noUncheckedIndexedAccess": true, // 无未检查索引访问
+    "noUnusedLocals": true, // 无未使用的本地变量
+    "noUnusedParameters": true, // 无未使用的参数
+    "strict": true, // 严格模式
+    "strictBindCallApply": true, // 严格绑定调用应用
+    "strictBuiltinIteratorReturn": true, // 严格内置迭代器返回
+    "strictFunctionTypes": true, // 严格函数类型
+    "strictNullChecks": true, // 严格空检查
+    "strictPropertyInitialization": true, // 严格属性初始化
+    "useUnknownInCatchVariables": true, // 在捕获变量中使用未知
+
+    /* 模块 */
+    // "baseUrl": "./", // 基准 URL
+    "module": "ESNext", // 模块
+    "moduleResolution": "bundler", // 模块解析
+    "allowArbitraryExtensions": false, // 允许任意扩展
+    "allowImportingTsExtensions": true, // 允许导入 ts 扩展
+    "allowUmdGlobalAccess": false, // 允许 UMD 全局访问
+    "noUncheckedSideEffectImports": true, // 无未检查的副作用导入
+    "resolveJsonModule": true, // 解析 json 模块
+    "resolvePackageJsonExports": false, // 解析 package.json 导出
+    "resolvePackageJsonImports": false, // 解析 package.json 导入
+    "types": [], // 类型
+
+    /* 触发 */
+    // "declaration": true, // 声明
+    // "declarationDir": "types", // 声明目录
+    // "declarationMap": true, // 声明映射
+    // "emitDeclarationOnly": false, // 仅触发声明，而不生成 js 代码
+    "noEmit": true, // 不生成 js 源代码、源映射或声明
+    // "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.xxx.tsbuildinfo",
+    "downlevelIteration": true, // 降级迭代
+    "importHelpers": true, // 导入助手
+    "noEmitHelpers": false, // 不触发助手
+
+    /* JavaScript 支持 */
+    "allowJs": true, // 允许在 TS 项目内部导入 JS 文件
+    "checkJs": true, // 检查 JS 文件
+    "maxNodeModuleJsDepth": 0, // 最大节点模块 JS 深度
+
+    /* 编辑器支持 */
+    "disableSizeLimit": false, // 禁用大小限制
+
+    /* 互操作约束 */
+    "esModuleInterop": true, // ES 模块间互操作
+    "forceConsistentCasingInFileNames": true, // 强制文件名中的一致性大小写
+    "verbatimModuleSyntax": true, // 任何使用 type 修饰符的内容都会被完全删除
+
+    /* 完整性 */
+    "skipLibCheck": true // 是否跳过库检查
+  }
+}

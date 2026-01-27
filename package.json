@@ -1,0 +1,70 @@
+{
+  "name": "@defchigga/tsconfig",
+  "version": "1.0.0",
+  "description": "一个基础通用的 tsconfig 配置",
+  "main": "tsconfig.json",
+  "files": [
+    ".github",
+    "tsconfig.json",
+    "tsconfig.*.json",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": "./tsconfig.json",
+    "./app": "./tsconfig.app.json",
+    "./dom": "./tsconfig.dom.json",
+    "./lib": "./tsconfig.lib.json",
+    "./node": "./tsconfig.node.json",
+    "./uni": "./tsconfig.uni.json",
+    "./vitest": "./tsconfig.vitest.json"
+  },
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "DefChigga",
+    "vue",
+    "tsconfig"
+  ],
+  "author": "DefChigga <defchigga@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Def-Chigga/tsconfig/issues"
+  },
+  "homepage": "https://github.com/Def-Chigga/tsconfig#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Def-Chigga/tsconfig.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "peerDependencies": {
+    "typescript": "5.x",
+    "vue": "^3.4.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "packageManager": "pnpm@10.28.0",
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.29",
+    "@tsconfig/node24": "^24.0.4",
+    "@tsconfig/recommended": "^1.0.13",
+    "@types/jsdom": "^27.0.0",
+    "@types/node": "^25.0.10",
+    "@uni-helper/uni-app-types": "1.0.0-alpha.7",
+    "@uni-helper/uni-ui-types": "1.0.0-alpha.7",
+    "miniprogram-api-typings": "^5.0.0",
+    "prettier": "3.8.1",
+    "typescript": "^5.9.3"
+  }
+}

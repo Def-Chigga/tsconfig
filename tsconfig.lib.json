@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false, // 生成 js 源代码、源映射或声明
+    "declaration": true, // 声明
+    "emitDeclarationOnly": true // 仅触发声明，而不生成 js 代码
+    // "skipLibCheck": false // 不跳过库检查
+  }
+}

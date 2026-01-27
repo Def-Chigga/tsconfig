@@ -26,26 +26,33 @@ npm install -D @defchigga/tsconfig typescript
 }
 ```
 
-### 2. Web 应用 (Vue 3 + Vite)
-
-适用于标准的 Vue 3 Web 应用程序。
-
-```json
-{
-  "extends": "@defchigga/tsconfig/tsconfig.app.json",
-  "include": ["src/**/*", "src/**/*.vue"],
-  "exclude": ["src/**/__tests__/*"]
-}
-```
-
-### 3. Node.js 环境
+### 2. Node.js 环境
 
 适用于 Node.js 脚本或配置文件（如 `vite.config.ts`, `vitest.config.ts`）。
 
 ```json
 {
   "extends": "@defchigga/tsconfig/tsconfig.node.json",
-  "include": ["vite.config.*", "vitest.config.*", "playwright.config.*"]
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*",
+    "eslint.config.*"
+  ]
+}
+```
+
+### 3. Web 应用 (Vue 3 + Vite)
+
+适用于标准的 Vue 3 Web 应用程序。
+
+```json
+{
+  "extends": "@defchigga/tsconfig/tsconfig.app.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"]
 }
 ```
 
@@ -56,7 +63,8 @@ npm install -D @defchigga/tsconfig typescript
 ```json
 {
   "extends": "@defchigga/tsconfig/tsconfig.uni.json",
-  "include": ["src/**/*", "src/**/*.vue"]
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"]
 }
 ```
 
@@ -78,7 +86,8 @@ npm install -D @defchigga/tsconfig typescript
 ```json
 {
   "extends": "@defchigga/tsconfig/tsconfig.vitest.json",
-  "include": ["src/**/__tests__/*"]
+  "include": ["src/**/__tests__/*", "env.d.ts"],
+  "exclude": []
 }
 ```
 
@@ -90,9 +99,9 @@ npm install -D @defchigga/tsconfig typescript
 {
   "files": [],
   "references": [
-    { "path": "@defchigga/tsconfig/tsconfig.app.json" },
-    { "path": "@defchigga/tsconfig/tsconfig.node.json" },
-    { "path": "@defchigga/tsconfig/tsconfig.vitest.json" }
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.vitest.json" }
   ]
 }
 ```

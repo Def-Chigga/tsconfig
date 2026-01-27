@@ -26,26 +26,33 @@ The base configuration providing strict type checking and modern module resoluti
 }
 ```
 
-### 2. Web Application (Vue 3 + Vite)
-
-For standard Vue 3 web applications.
-
-```json
-{
-  "extends": "@defchigga/tsconfig/tsconfig.app.json",
-  "include": ["src/**/*", "src/**/*.vue"],
-  "exclude": ["src/**/__tests__/*"]
-}
-```
-
-### 3. Node.js Environment
+### 2. Node.js Environment
 
 For Node.js scripts or configuration files (like `vite.config.ts`, `vitest.config.ts`).
 
 ```json
 {
   "extends": "@defchigga/tsconfig/tsconfig.node.json",
-  "include": ["vite.config.*", "vitest.config.*", "playwright.config.*"]
+  "include": [
+    "vite.config.*",
+    "vitest.config.*",
+    "cypress.config.*",
+    "nightwatch.conf.*",
+    "playwright.config.*",
+    "eslint.config.*"
+  ]
+}
+```
+
+### 3. Web Application (Vue 3 + Vite)
+
+For standard Vue 3 web applications.
+
+```json
+{
+  "extends": "@defchigga/tsconfig/tsconfig.app.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"]
 }
 ```
 
@@ -56,7 +63,8 @@ Specialized configuration for UniApp development, including types for `@dcloudio
 ```json
 {
   "extends": "@defchigga/tsconfig/tsconfig.uni.json",
-  "include": ["src/**/*", "src/**/*.vue"]
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"]
 }
 ```
 
@@ -78,7 +86,8 @@ For testing with Vitest.
 ```json
 {
   "extends": "@defchigga/tsconfig/tsconfig.vitest.json",
-  "include": ["src/**/__tests__/*"]
+  "include": ["src/**/__tests__/*", "env.d.ts"],
+  "exclude": []
 }
 ```
 
@@ -90,9 +99,9 @@ If you prefer to separate configurations for different environments (e.g., app, 
 {
   "files": [],
   "references": [
-    { "path": "@defchigga/tsconfig/tsconfig.app.json" },
-    { "path": "@defchigga/tsconfig/tsconfig.node.json" },
-    { "path": "@defchigga/tsconfig/tsconfig.vitest.json" }
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.vitest.json" }
   ]
 }
 ```

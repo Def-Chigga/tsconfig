@@ -59,6 +59,12 @@
     "forceConsistentCasingInFileNames": true, // 强制文件名中的一致性大小写
     "verbatimModuleSyntax": true, // 任何使用 type 修饰符的内容都会被完全删除
 
+    /* 语言和环境 */
+    "target": "ESNext",
+    "moduleDetection": "force", // 强制模块检测
+    "libReplacement": false, // 库替换
+    "useDefineForClassFields": true, // 使用 Define 作为类字段
+
     /* 完整性 */
     "skipLibCheck": true // 是否跳过库检查
   }

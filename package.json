@@ -1,6 +1,6 @@
 {
   "name": "@defchigga/tsconfig",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "一个基础通用的 tsconfig 配置",
   "main": "tsconfig.json",
   "files": [
@@ -13,12 +13,7 @@
   ],
   "exports": {
     ".": "./tsconfig.json",
-    "./app": "./tsconfig.app.json",
-    "./dom": "./tsconfig.dom.json",
-    "./lib": "./tsconfig.lib.json",
-    "./node": "./tsconfig.node.json",
-    "./uni": "./tsconfig.uni.json",
-    "./vitest": "./tsconfig.vitest.json"
+    "./tsconfig.json": "./tsconfig.json"
   },
   "scripts": {
     "format": "prettier --write ."
@@ -33,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/Def-Chigga/tsconfig/issues"
   },
-  "homepage": "https://github.com/Def-Chigga/tsconfig#readme",
+  "homepage": "https://github.com/Def-Chigga/tsconfig",
   "repository": {
     "type": "git",
     "url": "https://github.com/Def-Chigga/tsconfig.git"

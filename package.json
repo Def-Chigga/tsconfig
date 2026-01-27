@@ -1,6 +1,6 @@
 {
   "name": "@defchigga/tsconfig",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一个基础通用的 tsconfig 配置",
   "main": "tsconfig.json",
   "files": [

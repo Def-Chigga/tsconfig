@@ -8,19 +8,12 @@ importers:
 
   .:
     dependencies:
-      vue:
-        specifier: ^3.4.0
-        version: 3.5.27(typescript@5.9.3)
-    devDependencies:
       '@dcloudio/types':
         specifier: ^3.4.29
         version: 3.4.29
       '@tsconfig/node24':
         specifier: ^24.0.4
         version: 24.0.4
-      '@tsconfig/recommended':
-        specifier: ^1.0.13
-        version: 1.0.13
       '@types/jsdom':
         specifier: ^27.0.0
         version: 27.0.0
@@ -36,6 +29,10 @@ importers:
       miniprogram-api-typings:
         specifier: ^5.0.0
         version: 5.0.0
+      vue:
+        specifier: ^3.4.0
+        version: 3.5.27(typescript@5.9.3)
+    devDependencies:
       prettier:
         specifier: 3.8.1
         version: 3.8.1
@@ -70,9 +67,6 @@ packages:
 
   '@tsconfig/node24@24.0.4':
     resolution: {integrity: sha512-2A933l5P5oCbv6qSxHs7ckKwobs8BDAe9SJ/Xr2Hy+nDlwmLE1GhFh/g/vXGRZWgxBg9nX/5piDtHR9Dkw/XuA==}
-
-  '@tsconfig/recommended@1.0.13':
-    resolution: {integrity: sha512-sySRuBfMKyKO/j2ZAhR8kSembhjuPEV4Ra3AHtmWLq51+iGaudr45crPSzNC5b7/Ctrh9dfUpBuTlYrH6rM58Q==}
 
   '@types/jsdom@27.0.0':
     resolution: {integrity: sha512-NZyFl/PViwKzdEkQg96gtnB8wm+1ljhdDay9ahn4hgb+SfVtPCbm3TlmDUFXTA+MGN3CijicnMhG18SI5H3rFw==}
@@ -207,8 +201,6 @@ snapshots:
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
   '@tsconfig/node24@24.0.4': {}
-
-  '@tsconfig/recommended@1.0.13': {}
 
   '@types/jsdom@27.0.0':
     dependencies:

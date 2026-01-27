@@ -1,5 +1,5 @@
 {
-  "extends": "./tsconfig.dom.json",
+  "extends": "./tsconfig.json",
   // "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   // "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
@@ -7,6 +7,13 @@
 
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+
+    /* 语言和环境 */
+    "jsx": "preserve", // 触发 .jsx 文件，其中 JSX 保持不变
+    "jsxImportSource": "vue", // jsx 导入源
+
+    /* DOM */
+    "lib": ["ES2020", "DOM", "DOM.Iterable"]
   }
 }

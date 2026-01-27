@@ -14,10 +14,10 @@
   "exports": {
     ".": "./tsconfig.json",
     "./tsconfig.json": "./tsconfig.json",
-    "./tsconfig.dom.json": "./tsconfig.dom.json",
     "./tsconfig.node.json": "./tsconfig.node.json",
     "./tsconfig.app.json": "./tsconfig.app.json",
     "./tsconfig.uni.json": "./tsconfig.uni.json",
+    "./tsconfig.lib.json": "./tsconfig.lib.json",
     "./tsconfig.vitest.json": "./tsconfig.vitest.json"
   },
   "scripts": {
@@ -55,15 +55,16 @@
     }
   },
   "packageManager": "pnpm@10.28.0",
-  "devDependencies": {
+  "dependencies": {
     "@dcloudio/types": "^3.4.29",
     "@tsconfig/node24": "^24.0.4",
-    "@tsconfig/recommended": "^1.0.13",
     "@types/jsdom": "^27.0.0",
     "@types/node": "^25.0.10",
     "@uni-helper/uni-app-types": "1.0.0-alpha.7",
     "@uni-helper/uni-ui-types": "1.0.0-alpha.7",
-    "miniprogram-api-typings": "^5.0.0",
+    "miniprogram-api-typings": "^5.0.0"
+  },
+  "devDependencies": {
     "prettier": "3.8.1",
     "typescript": "^5.9.3"
   }

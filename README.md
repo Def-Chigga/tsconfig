@@ -2,14 +2,60 @@
 
 [简体中文](./README.zh-CN.md) | English
 
-Shared TypeScript configuration for Vue 3, UniApp, and general library development.
+Basic TypeScript configuration for Web (Vue, etc.), Node, Lib, Vitest, and Uniapp development.
 
 ## Installation
 
 ```bash
-pnpm add -D @defchigga/tsconfig typescript
-# or
-npm install -D @defchigga/tsconfig typescript
+pnpm add -D @defchigga/tsconfig
+# 或者
+yarn add -D @defchigga/tsconfig
+# 或者
+npm install -D @defchigga/tsconfig
+```
+
+## Prerequisites & Peer Dependencies
+
+This package relies on several peer dependencies. Depending on your project type, you need to install the corresponding packages:
+
+### 1. Base / Library
+
+For basic usage or library development:
+
+```bash
+pnpm add -D typescript
+```
+
+### 2. Vue Or Other Web Application
+
+For Vue3 web applications:
+
+```bash
+pnpm add -D typescript vue
+```
+
+### 3. Node.js Application
+
+For Node.js apps or scripts:
+
+```bash
+pnpm add -D typescript @types/node @tsconfig/node24
+```
+
+### 4. UniApp Application
+
+For UniApp projects:
+
+```bash
+pnpm add -D typescript @dcloudio/types @uni-helper/uni-types @uni-helper/uni-app-types @uni-helper/uni-ui-types @uni-helper/uni-cloud-types miniprogram-api-typings
+```
+
+### 5. Testing (Vitest)
+
+For testing environments:
+
+```bash
+pnpm add -D typescript @types/node @tsconfig/node24 @types/jsdom jsdom
 ```
 
 ## Usage
@@ -28,7 +74,7 @@ The base configuration providing strict type checking and modern module resoluti
 
 ### 2. Node.js Environment
 
-For Node.js scripts or configuration files (like `vite.config.ts`, `vitest.config.ts`).
+For Node.js scripts.
 
 ```json
 {
@@ -44,9 +90,9 @@ For Node.js scripts or configuration files (like `vite.config.ts`, `vitest.confi
 }
 ```
 
-### 3. Web Application (Vue 3 + Vite)
+### 3. Web Application (Vue3 + Vite)
 
-For standard Vue 3 web applications.
+For standard Vue3 web applications.
 
 ```json
 {
@@ -75,7 +121,7 @@ For building libraries. It enables declaration file generation (`declaration: tr
 ```json
 {
   "extends": "@defchigga/tsconfig/tsconfig.lib.json",
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "lib/**/*", "packages/**/*"]
 }
 ```
 

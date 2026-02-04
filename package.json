@@ -1,50 +1,63 @@
 {
   "name": "@defchigga/tsconfig",
-  "version": "1.0.3",
-  "description": "一个基础通用的 tsconfig 配置",
+  "version": "1.0.4",
+  "description": "A modern and basic universal tsconfig configuration, including vue, web, node, lib, vitest and uniapp configurations",
+  "keywords": [
+    "tsconfig",
+    "typescript",
+    "vue",
+    "web",
+    "node",
+    "lib",
+    "vitest",
+    "uniapp"
+  ],
   "main": "tsconfig.json",
   "files": [
-    ".github",
     "tsconfig.json",
-    "tsconfig.*.json",
-    "LICENSE",
-    "README.md",
-    "package.json"
+    "tsconfig.*.json"
   ],
   "exports": {
     ".": "./tsconfig.json",
     "./tsconfig.json": "./tsconfig.json",
-    "./tsconfig.node.json": "./tsconfig.node.json",
-    "./tsconfig.app.json": "./tsconfig.app.json",
-    "./tsconfig.uni.json": "./tsconfig.uni.json",
-    "./tsconfig.lib.json": "./tsconfig.lib.json",
-    "./tsconfig.vitest.json": "./tsconfig.vitest.json"
+    "./tsconfig.*.json": "./tsconfig.*.json"
   },
+  "license": "MIT",
   "scripts": {
     "format": "prettier --write ."
   },
-  "keywords": [
-    "DefChigga",
-    "vue",
-    "tsconfig"
-  ],
   "author": "DefChigga <defchigga@qq.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Def-Chigga/tsconfig/issues"
-  },
-  "homepage": "https://github.com/Def-Chigga/tsconfig",
+  "homepage": "https://github.com/Def-Chigga/tsconfig#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Def-Chigga/tsconfig.git"
+    "url": "git+https://github.com/Def-Chigga/tsconfig.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Def-Chigga/tsconfig/issues",
+    "email": "defchigga@qq.com"
   },
   "publishConfig": {
     "access": "public",
+    "tag": "latest",
     "registry": "https://registry.npmjs.org/"
   },
+  "devDependencies": {
+    "prettier": "3.8.1",
+    "typescript": "^5.9.3"
+  },
   "peerDependencies": {
-    "typescript": "5.x",
-    "vue": "^3.4.0"
+    "typescript": "^5.x",
+    "vue": "^3.5.x",
+    "jsdom": "^27.x",
+    "@types/jsdom": "^27.x",
+    "@types/node": "^25.x",
+    "@tsconfig/node24": "^24.x",
+    "@dcloudio/types": "^3.4.29",
+    "@uni-helper/uni-types": "^1.0.0-alpha.7",
+    "@uni-helper/uni-app-types": "^1.0.0-alpha.7",
+    "@uni-helper/uni-ui-types": "^1.0.0-alpha.7",
+    "@uni-helper/uni-cloud-types": "^1.0.0-alpha.7",
+    "miniprogram-api-typings": "^5.0.0"
   },
   "peerDependenciesMeta": {
     "typescript": {
@@ -52,20 +65,35 @@
     },
     "vue": {
       "optional": true
+    },
+    "jsdom": {
+      "optional": true
+    },
+    "@types/jsdom": {
+      "optional": true
+    },
+    "@types/node": {
+      "optional": true
+    },
+    "@tsconfig/node24": {
+      "optional": true
+    },
+    "@dcloudio/types": {
+      "optional": true
+    },
+    "@uni-helper/uni-app-types": {
+      "optional": true
+    },
+    "@uni-helper/uni-ui-types": {
+      "optional": true
+    },
+    "miniprogram-api-typings": {
+      "optional": true
     }
   },
-  "packageManager": "pnpm@10.28.0",
-  "dependencies": {
-    "@dcloudio/types": "^3.4.29",
-    "@tsconfig/node24": "^24.0.4",
-    "@types/jsdom": "^27.0.0",
-    "@types/node": "^25.0.10",
-    "@uni-helper/uni-app-types": "1.0.0-alpha.7",
-    "@uni-helper/uni-ui-types": "1.0.0-alpha.7",
-    "miniprogram-api-typings": "^5.0.0"
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=10.0.0"
   },
-  "devDependencies": {
-    "prettier": "3.8.1",
-    "typescript": "^5.9.3"
-  }
+  "packageManager": "pnpm@10.28.0"
 }

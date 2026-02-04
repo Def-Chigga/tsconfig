@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
     /* 类型检查 */
-    "allowUnreachableCode": false, // 允许无法访问的代码
-    "allowUnusedLabels": false, // 允许未使用的标签
+    "allowUnreachableCode": false, // 不允许无法访问的代码
+    "allowUnusedLabels": false, // 不允许未使用的标签
     "alwaysStrict": true, // 始终严格模式
-    "exactOptionalPropertyTypes": false, // 精确可选属性类型
-    "noFallthroughCasesInSwitch": true, // Switch 中无 Fallthrough 情况
+    "exactOptionalPropertyTypes": false, // 不启用精确的可选属性类型检查
+    "noFallthroughCasesInSwitch": true, // 报告 switch 语句中的 fallthrough 错误
     "noImplicitAny": true, // 无隐式 Any
-    "noImplicitOverride": true, // 无隐式覆盖
-    "noImplicitReturns": true, // 无隐式返回
+    "noImplicitOverride": true, // 无隐式覆盖，确保派生类中的重写成员标记为 override
+    "noImplicitReturns": true, // 无隐式返回，报告函数中并非所有代码路径都有返回值的错误
     "noImplicitThis": true, // 无隐式 this
-    "noPropertyAccessFromIndexSignature": true, // 无索引签名的属性访问
-    "noUncheckedIndexedAccess": true, // 无未检查索引访问
-    "noUnusedLocals": true, // 无未使用的本地变量
-    "noUnusedParameters": true, // 无未使用的参数
-    "strict": true, // 严格模式
+    "noPropertyAccessFromIndexSignature": true, // 强制要求在访问索引签名时使用索引访问器
+    "noUncheckedIndexedAccess": true, // 在索引访问时添加 undefined 到类型中
+    "noUnusedLocals": true, // 报告未使用的局部变量
+    "noUnusedParameters": true, // 报告未使用的函数参数
+    "strict": true, // 启用所有严格类型检查选项
     "strictBindCallApply": true, // 严格绑定调用应用
     "strictBuiltinIteratorReturn": true, // 严格内置迭代器返回
     "strictFunctionTypes": true, // 严格函数类型
@@ -24,13 +24,13 @@
 
     /* 模块 */
     // "baseUrl": "./", // 基准 URL
-    "module": "ESNext", // 模块
-    "moduleResolution": "bundler", // 模块解析
+    "module": "ESNext", // 指定模块代码生成
+    "moduleResolution": "bundler", // 指定模块解析策略
     "allowArbitraryExtensions": false, // 允许任意扩展
-    "allowImportingTsExtensions": true, // 允许导入 ts 扩展
+    "allowImportingTsExtensions": true, // 允许导入 .ts 文件扩展名
     "allowUmdGlobalAccess": false, // 允许 UMD 全局访问
-    "noUncheckedSideEffectImports": true, // 无未检查的副作用导入
-    "resolveJsonModule": true, // 解析 json 模块
+    "noUncheckedSideEffectImports": true, // 检查副作用导入
+    "resolveJsonModule": true, // 允许导入 .json 文件
     "resolvePackageJsonExports": false, // 解析 package.json 导出
     "resolvePackageJsonImports": false, // 解析 package.json 导入
     "types": [], // 类型
@@ -41,31 +41,32 @@
     // "declarationMap": true, // 声明映射
     // "emitDeclarationOnly": false, // 仅触发声明，而不生成 js 代码
     "noEmit": true, // 不生成 js 源代码、源映射或声明
-    // "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.xxx.tsbuildinfo",
-    "downlevelIteration": true, // 降级迭代
-    "importHelpers": true, // 导入助手
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "downlevelIteration": true, // 降级迭代，为迭代器生成更兼容的代码
+    "importHelpers": true, // 导入助手，从 tslib 导入辅助函数
     "noEmitHelpers": false, // 不触发助手
 
     /* JavaScript 支持 */
     "allowJs": true, // 允许在 TS 项目内部导入 JS 文件
-    "checkJs": true, // 检查 JS 文件
-    "maxNodeModuleJsDepth": 0, // 最大节点模块 JS 深度
+    "checkJs": true, // 检查 JS 文件，报告 JavaScript 文件中的错误
+    "maxNodeModuleJsDepth": 0, // 查找 node_modules 中 JS 文件的最大深度
 
     /* 编辑器支持 */
     "disableSizeLimit": false, // 禁用大小限制
 
     /* 互操作约束 */
-    "esModuleInterop": true, // ES 模块间互操作
-    "forceConsistentCasingInFileNames": true, // 强制文件名中的一致性大小写
-    "verbatimModuleSyntax": true, // 任何使用 type 修饰符的内容都会被完全删除
+    "esModuleInterop": true, // 启用 CommonJS 和 ES 模块之间的互操作性
+    "forceConsistentCasingInFileNames": true, // 强制文件名大小写一致
+    "isolatedModules": true, // 确保每个文件都可以安全地单独转译
+    "verbatimModuleSyntax": true, // 强制导入和导出与其原始语法保持一致
 
     /* 语言和环境 */
-    "target": "ESNext",
+    "target": "ESNext", // 指定 ECMAScript 目标版本
+    // "lib": ["ESNext", "DOM", "DOM.Iterable"], // 指定要包含在编译中的库文件
+    "useDefineForClassFields": true, // 使用 Define 语义进行类字段初始化
     "moduleDetection": "force", // 强制模块检测
-    "libReplacement": false, // 库替换
-    "useDefineForClassFields": true, // 使用 Define 作为类字段
 
     /* 完整性 */
-    "skipLibCheck": true // 是否跳过库检查
+    "skipLibCheck": true // 跳过声明文件的类型检查
   }
 }

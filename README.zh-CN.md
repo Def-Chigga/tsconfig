@@ -2,14 +2,60 @@
 
 简体中文 | [English](./README.md)
 
-适用于 Vue 3、UniApp 以及通用库开发的 TypeScript 共享配置。
+适用于 Web（Vue等）, Node, Lib, Vitest 以及 Uniapp 开发的 TypeScript 基础配置。
 
 ## 安装
 
 ```bash
-pnpm add -D @defchigga/tsconfig typescript
+pnpm add -D @defchigga/tsconfig
 # 或者
-npm install -D @defchigga/tsconfig typescript
+yarn add -D @defchigga/tsconfig
+# 或者
+npm install -D @defchigga/tsconfig
+```
+
+## 前置要求与 Peer Dependencies
+
+本包依赖于多个对等依赖（peer dependencies）。根据您的项目类型，您需要安装对应的依赖包：
+
+### 1. 基础 / 库开发
+
+用于基础使用或库开发：
+
+```bash
+pnpm add -D typescript
+```
+
+### 2. Vue 等其它 Web 应用
+
+用于 Vue3 Web 应用程序：
+
+```bash
+pnpm add -D typescript vue
+```
+
+### 3. Node.js 应用
+
+用于 Node.js 应用或脚本：
+
+```bash
+pnpm add -D typescript @types/node @tsconfig/node24
+```
+
+### 4. UniApp 应用
+
+用于 UniApp 项目：
+
+```bash
+pnpm add -D typescript @dcloudio/types @uni-helper/uni-types @uni-helper/uni-app-types @uni-helper/uni-ui-types @uni-helper/uni-cloud-types miniprogram-api-typings
+```
+
+### 5. 测试 (Vitest)
+
+用于测试环境：
+
+```bash
+pnpm add -D typescript @types/jsdom jsdom
 ```
 
 ## 使用方法
@@ -28,7 +74,7 @@ npm install -D @defchigga/tsconfig typescript
 
 ### 2. Node.js 环境
 
-适用于 Node.js 脚本或配置文件（如 `vite.config.ts`, `vitest.config.ts`）。
+适用于 Node.js 脚本。
 
 ```json
 {
@@ -44,9 +90,9 @@ npm install -D @defchigga/tsconfig typescript
 }
 ```
 
-### 3. Web 应用 (Vue 3 + Vite)
+### 3. Web 应用 (Vue3 + Vite)
 
-适用于标准的 Vue 3 Web 应用程序。
+适用于标准的 Vue3 Web 应用程序。
 
 ```json
 {
@@ -75,7 +121,7 @@ npm install -D @defchigga/tsconfig typescript
 ```json
 {
   "extends": "@defchigga/tsconfig/tsconfig.lib.json",
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "lib/**/*", "packages/**/*"]
 }
 ```
 
